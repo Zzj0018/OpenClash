@@ -401,6 +401,9 @@ proxy-groups:
 - {name: 📲 Telegram, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
 - {name: 🎥 NETFLIX, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动IPV6, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
 - {name: myTVsuper, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
+- {name: 🍀 Google, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
+- {name: 🌍 国外, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
+- {name: 🌍 国内频道, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
 - {name: 🍎 Apple, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
 - {name: 🐟 漏网之鱼, type: select, proxies: [ ♻️ 香港自动, ♻️ 香港自动A, ♻️ 香港自动B, ♻️ 香港自动C, ♻️ 台湾自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 美国自动, 🚀 节点选择, ♻️ 自动选择, DIRECT]}
 - {name: ♻️ 香港自动, !!merge <<: *pg_ut, include-all: true, filter: "(?=.*(港|(?i)Hong))^((?!(台|日|韩|新|深|官网|美)).)*$"}
@@ -421,11 +424,12 @@ rule-providers:
   geolocation-!cn: {!!merge <<: *domain_mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_site: {!!merge <<: *domain_mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
   cn_ip: {!!merge <<: *ip_mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
+  google_ip: {!!merge <<: *ip_mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
   
   # Classical 格式文件
   # https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
   myTVSUPER: {!!merge <<: *class_yaml, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/myTVSUPER/myTVSUPER.yaml"}
-  Global: {!!merge <<: *class_yaml, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.yaml"}
+  #Global: {!!merge <<: *class_yaml, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.yaml"}
   # RULE-SET,telegram,Proxy
 
   # Mrs 格式文件
@@ -441,6 +445,26 @@ rule-providers:
   tiktok_domain: {!!merge <<: *domain_mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
   # RULE-SET,telegram_ip,Proxy
   # RULE-SET,telegram_domain,Proxy
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+ 
+  Proxy:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9naHAuY2kvcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9saWFuZHUyMDI0L2NsYXNoL3JlZnMvaGVhZHMvbWFpbi9Qcm94eS5saXN0
+    path: ./providers/rule-provider_Proxy.yaml
+    interval: 86400
+    
+  Global:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9naHAuY2kvcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ibGFja21hdHJpeDcvaW9zX3J1bGVfc2NyaXB0L3JlZnMvaGVhZHMvbWFzdGVyL3J1bGUvQ2xhc2gvR2xvYmFsL0dsb2JhbC5saXN0
+    path: ./providers/rule-provider_Global.yaml
+    interval: 86400
 
 
 # 规则
@@ -450,16 +474,19 @@ rules:
 - RULE-SET,disney_domain,♻️Disney+
 - RULE-SET,myTVSUPER,myTVsuper
 - RULE-SET,tiktok_domain,🎵 TikTok
+- RULE-SET,google_domain,🍀 Google
 - RULE-SET,telegram_domain,📲 Telegram
-- RULE-SET,netflix_domain,🎥 NETFLIX
-- RULE-SET,Global,🚀 节点选择
+- RULE-SET,Proxy,🌍 国外
+- RULE-SET,Global,🌍 国外
 - RULE-SET,apple_domain,🍎 Apple
 - RULE-SET,geolocation-!cn,🚀 节点选择
+- RULE-SET,direct,🌍 国内频道
 - DOMAIN-SUFFIX,cn,DIRECT
 - RULE-SET,cn_site,DIRECT
 - RULE-SET,cn_ip,DIRECT
 - GEOSITE,CN,DIRECT
 - GEOIP,CN,DIRECT,no-resolve
 - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
+- RULE-SET,google_ip,🍀 Google,no-resolve
 - RULE-SET,telegram_ip,🚀 节点选择,no-resolve
 - Match,🐟 漏网之鱼
