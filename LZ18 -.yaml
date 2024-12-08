@@ -202,7 +202,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use: *proxy-providers-use
-    <<: *pr
+    <<: *pr 
 
   - name: 📲 电报消息
     type: select
@@ -306,6 +306,19 @@ proxy-groups:
       - 🇭🇰 香港节点2
       - 🇭🇰 香港节点3
       - 🇭🇰 香港节点TVB
+  - name: 📢 谷歌
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -335,6 +348,56 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🚀 手动切换
   - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 📢 谷歌🇨🇳Play下载
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 📢 谷歌🇨🇳Play服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 📢 谷歌🇨🇳
     type: select
     proxies:
       - DIRECT
@@ -422,7 +485,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use: *proxy-providers-use
-    filter: (?i)香港30|香港50|IPV6 香港
+    filter: (?i)香港30|IPV6 香港
     
   - name: 🇭🇰 香港节点TVB
     type: url-test
@@ -439,15 +502,15 @@ proxy-groups:
     tolerance: 50
     use: *proxy-providers-use
     filter: (?i)IPV6 香港|🇭🇰香港 IPV6
-
-      - name: 🇭🇰 负载均衡1
+    
+  - name: 🇭🇰 负载均衡1
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 300
     strategy: consistent-hashing
     lazy: true
     include-all-providers: true
-    filter: (?i)🇭🇰 香港
+    filter: (?i)🇭🇰 香港|香港 IPV6
     
   - name: 🇭🇰 负载均衡2
     type: load-balance
@@ -465,7 +528,7 @@ proxy-groups:
     strategy: consistent-hashing
     lazy: true
     include-all-providers: true
-    filter: (?i)香港30|香港50|IPV6 香港
+    filter: (?i)香港30|IPV6 香港
 
   - name: 🇯🇵 日本节点
     type: url-test
@@ -528,14 +591,20 @@ rules:
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
   - RULE-SET,speedtest,🎯 全球直连
   - RULE-SET,UnBan,🎯 全球直连
-  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,📢 谷歌🇨🇳Play下载
+  - DOMAIN-SUFFIX,services.googleapis.cn,📢 谷歌🇨🇳Play服务
+  - RULE-SET,GoogleCNProxyIP,📢 谷歌🇨🇳Play服务
+  - RULE-SET,GoogleCN,📢 谷歌🇨🇳
+  - RULE-SET,YouTube,📹 油管视频
+  - RULE-SET,Google,📢 谷歌
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,Telegram,📲 电报消息
   - RULE-SET,MyTVSuper,🇭🇰 myTVsuper
   - RULE-SET,Disney,♻️Disney+
   - RULE-SET,TikTok,🎵 TikTok
-  - RULE-SET,YouTube,📹 油管视频
   - RULE-SET,Netflix,🎥 奈飞视频
+  - RULE-SET,Proxy,🌍 国外媒体
   - RULE-SET,Global,🌍 国外媒体
   - RULE-SET,direct,🌏 国内媒体
   - RULE-SET,ProxyGFWlist,🚀 节点选择
@@ -608,6 +677,12 @@ rule-providers:
     behavior: classical
     url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvR29vZ2xlQ04ubGlzdA
     path: ./providers/rule-provider_GoogleCN.yaml
+    interval: 86400
+  GoogleCNProxyIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVDTlByb3h5SVAubGlzdA
+    path: ./providers/rule-provider_GoogleCNProxyIP.yaml
     interval: 86400
   Apple:
     type: http
@@ -699,5 +774,22 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/direct.yaml
     interval: 86400
- 
-
+  Proxy:
+    type: http
+    behavior: classical
+    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9naHAuY2kvcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9saWFuZHUyMDI0L2NsYXNoL3JlZnMvaGVhZHMvbWFpbi9Qcm94eS5saXN0
+    path: ./providers/rule-provider_Proxy.yaml
+    interval: 86400
+    
+  Google:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGUubGlzdA
+    path: ./providers/rule-provider_Google.yaml
+    interval: 86400
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVGQ00ubGlzdA
+    path: ./providers/rule-provider_GoogleFCM.yaml
+    interval: 86400
