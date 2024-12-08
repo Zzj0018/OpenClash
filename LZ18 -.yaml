@@ -203,33 +203,6 @@ proxy-groups:
     tolerance: 50
     use: *proxy-providers-use
     <<: *pr
-    
-  - name: 🇭🇰 负载均衡1
-    type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    lazy: true
-    include-all-providers: true
-    filter: (?i)🇭🇰 香港
-    
-  - name: 🇭🇰 负载均衡2
-    type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    lazy: true
-    include-all-providers: true
-    filter: (?i)香港0
-    
-  - name: 🇭🇰 负载均衡3
-    type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    strategy: consistent-hashing
-    lazy: true
-    include-all-providers: true
-    filter: (?i)香港30|香港50|IPV6 香港
 
   - name: 📲 电报消息
     type: select
@@ -333,28 +306,6 @@ proxy-groups:
       - 🇭🇰 香港节点2
       - 🇭🇰 香港节点3
       - 🇭🇰 香港节点TVB
-  - name: 🌍 HBO
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🇭🇰 负载均衡1
-      - 🇭🇰 负载均衡2
-      - 🇭🇰 负载均衡3
-      - 🇭🇰 香港节点
-      - 🇭🇰 香港节点1
-      - 🇭🇰 香港节点2
-      - 🇭🇰 香港节点3
-      - 🇭🇰 香港节点TVB
-      - 🇭🇰 IPV6
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇸🇬 IPV6
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
-      - 🚀 手动切换
-      - DIRECT
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -489,6 +440,33 @@ proxy-groups:
     use: *proxy-providers-use
     filter: (?i)IPV6 香港|🇭🇰香港 IPV6
 
+      - name: 🇭🇰 负载均衡1
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    lazy: true
+    include-all-providers: true
+    filter: (?i)🇭🇰 香港
+    
+  - name: 🇭🇰 负载均衡2
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    lazy: true
+    include-all-providers: true
+    filter: (?i)香港0
+    
+  - name: 🇭🇰 负载均衡3
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    lazy: true
+    include-all-providers: true
+    filter: (?i)香港30|香港50|IPV6 香港
+
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -542,8 +520,6 @@ proxy-groups:
 
 rules:
   - RULE-SET,Direct,🎯 全球直连
-  - DOMAIN-KEYWORD,max.com,🌍 HBO
-  - RULE-SET,HBO,🌍 HBO
   - RULE-SET,Xiaomi,🔯 小米智能
   - RULE-SET,LvMiLianChuang,🔯 绿米智能
   - RULE-SET,ProxyLite,🚀 节点选择
@@ -674,12 +650,6 @@ rule-providers:
     behavior: classical
     url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9OZXRmbGl4Lmxpc3Q
     path: ./providers/rule-provider_Netflix.yaml
-    interval: 86400
-  HBO:
-    type: http
-    behavior: classical
-    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1p6ajAwMTgvSEJPL3JlZnMvaGVhZHMvbWFpbi9IQk8ubGlzdA
-    path: ./providers/rule-provider_HBO.yaml
     interval: 86400
   Global:
     type: http
