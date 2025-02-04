@@ -415,7 +415,7 @@ rule-providers:
   
   # Classical 格式文件
   # https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
-  myTVSUPER: {!!merge <<: *class_yaml, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/myTVSUPER/myTVSUPER.yamll"}
+  myTVSUPER: {!!merge <<: *class_yaml, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/myTVSUPER/myTVSUPER.yaml"}
   # RULE-SET,telegram,Proxy
 
   # Mrs 格式文件
