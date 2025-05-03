@@ -1,0 +1,884 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 01", server: ppy-twv1.02ijp4uos1.download, port: 26059, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 02", server: ppy-twv1.02ijp4uos1.download, port: 26060, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 03", server: ppy-twv1.02ijp4uos1.download, port: 26061, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 04", server: ppy-twv1.02ijp4uos1.download, port: 26062, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 05", server: ppy-twv2.02ijp4uos1.download, port: 26059, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 06", server: ppy-twv2.02ijp4uos1.download, port: 26060, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 07", server: ppy-twv2.02ijp4uos1.download, port: 26061, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 泡泡 台湾 08", server: ppy-twv2.02ijp4uos1.download, port: 26062, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇨🇳 猫耳云 台湾 01", server: hzyd.sevenka.top, port: 29853, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇨🇳 猫耳云 台湾 02", server: gdyd.sevenka.top, port: 40395, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇨🇳 猫耳云 台湾 03", server: hzyd.sevenka.top, port: 40043, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇨🇳 猫耳云 台湾 04", server: gdyd.sevenka.top, port: 25845, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[Hysteria2] 🇨🇳 猫耳云 台湾 05", server: cntw.3668989.xyz, port: 30132, type: hysteria2, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, auth: b2a1ebcc-ba9b-4959-9877-c994e1640574, sni: hy2tw.maocf1.top, up: 5000, down: 5000, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 糖果 台湾 01", server: iepl.kaiqsz.com, port: 53515, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 糖果 台湾 02", server: lt.kaiqsz.com, port: 53515, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 糖果 台湾 03", server: yd.kaiqsz.com, port: 53515, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 糖果 台湾 04", server: iepl.kaiqsz.com, port: 45229, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 糖果 台湾 05", server: lt.kaiqsz.com, port: 45229, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 糖果 台湾 06", server: yd.kaiqsz.com, port: 45229, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 01", server: ppy-hkv1.02ijp4uos1.download, port: 26010, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 02", server: ppy-hkv1.02ijp4uos1.download, port: 26011, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 03", server: ppy-hkv1.02ijp4uos1.download, port: 26012, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 04", server: ppy-hkv1.02ijp4uos1.download, port: 26013, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 05", server: ppy-hkv1.02ijp4uos1.download, port: 26014, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 06", server: ppy-hkv1.02ijp4uos1.download, port: 26015, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 07", server: ppy-hkv2.02ijp4uos1.download, port: 26010, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 08", server: ppy-hkv2.02ijp4uos1.download, port: 26011, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 09", server: ppy-hkv2.02ijp4uos1.download, port: 26012, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 10", server: ppy-hkv2.02ijp4uos1.download, port: 26013, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 11", server: ppy-hkv2.02ijp4uos1.download, port: 26014, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 泡泡 香港 12", server: ppy-hkv2.02ijp4uos1.download, port: 26015, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 猫耳云 香港 01", server: hzyd.sevenka.top, port: 21258, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇭🇰 猫耳云 香港 02", server: gdyd.sevenka.top, port: 21259, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇭🇰 猫耳云 香港 03", server: hzyd.sevenka.top, port: 33054, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇭🇰 猫耳云 香港 04", server: gdyd.sevenka.top, port: 55130, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇭🇰 猫耳云 香港 05", server: hzyd.sevenka.top, port: 36921, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇭🇰 猫耳云 香港 06", server: gdyd.sevenka.top, port: 36923, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[Hysteria2] 🇭🇰 猫耳云 香港 07", server: hy2hk.maocf1.top, port: 20906, type: hysteria2, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, auth: b2a1ebcc-ba9b-4959-9877-c994e1640574, sni: hy2hg.maocf1.top, up: 5000, down: 5000, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 糖果 香港 01", server: iepl.kaiqsz.com, port: 20745, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 糖果 香港 02", server: lt.kaiqsz.com, port: 20745, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 糖果 香港 03", server: yd.kaiqsz.com, port: 20745, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 01", server: ppy-jpv1.02ijp4uos1.download, port: 26006, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 02", server: ppy-jpv1.02ijp4uos1.download, port: 26007, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 03", server: ppy-jpv1.02ijp4uos1.download, port: 26008, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 04", server: ppy-jpv1.02ijp4uos1.download, port: 26009, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 05", server: ppy-jpv2.02ijp4uos1.download, port: 26006, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 06", server: ppy-jpv2.02ijp4uos1.download, port: 26007, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 07", server: ppy-jpv2.02ijp4uos1.download, port: 26008, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 泡泡 日本 08", server: ppy-jpv2.02ijp4uos1.download, port: 26009, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 猫耳云 日本 01", server: hzyd.sevenka.top, port: 44879, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇯🇵 猫耳云 日本 02", server: gdyd.sevenka.top, port: 44476, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇯🇵 猫耳云 日本 03", server: hzyd.sevenka.top, port: 46635, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇯🇵 猫耳云 日本 04", server: gdyd.sevenka.top, port: 53537, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[Hysteria2] 🇯🇵 猫耳云 日本 05", server: hy2jp.maocf1.top, port: 20402, type: hysteria2, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, auth: b2a1ebcc-ba9b-4959-9877-c994e1640574, sni: hy2jp.maocf1.top, up: 5000, down: 5000, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇯🇵 糖果 日本 01", server: iepl.kaiqsz.com, port: 59528, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇯🇵 糖果 日本 02", server: lt.kaiqsz.com, port: 59528, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇯🇵 糖果 日本 03", server: yd.kaiqsz.com, port: 59528, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 01", server: ppy-sgv1.02ijp4uos1.download, port: 26020, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 02", server: ppy-sgv1.02ijp4uos1.download, port: 26021, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 03", server: ppy-sgv1.02ijp4uos1.download, port: 26022, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 04", server: ppy-sgv1.02ijp4uos1.download, port: 26023, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 05", server: ppy-sgv2.02ijp4uos1.download, port: 26020, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 06", server: ppy-sgv2.02ijp4uos1.download, port: 26021, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 07", server: ppy-sgv2.02ijp4uos1.download, port: 26022, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 泡泡 新加坡 08", server: ppy-sgv2.02ijp4uos1.download, port: 26023, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇸🇬 猫耳云 新加坡 01", server: hzyd.sevenka.top, port: 10276, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇸🇬 猫耳云 新加坡 02", server: gdyd.sevenka.top, port: 14359, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇸🇬 猫耳云 新加坡 03", server: hzyd.sevenka.top, port: 33783, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇸🇬 猫耳云 新加坡 04", server: gdyd.sevenka.top, port: 53023, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[Hysteria2] 🇸🇬 猫耳云 新加坡 05", server: hy2sg.maocf1.top, port: 20084, type: hysteria2, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, auth: b2a1ebcc-ba9b-4959-9877-c994e1640574, sni: hy2sg.maocf1.top, up: 5000, down: 5000, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 糖果 新加坡 01", server: iepl.kaiqsz.com, port: 25507, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 糖果 新加坡 02", server: lt.kaiqsz.com, port: 25507, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 糖果 新加坡 03", server: yd.kaiqsz.com, port: 25507, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 01", server: ppy-usv1.02ijp4uos1.download, port: 26001, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 02", server: ppy-usv1.02ijp4uos1.download, port: 26002, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 03", server: ppy-usv1.02ijp4uos1.download, port: 26003, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 04", server: ppy-usv1.02ijp4uos1.download, port: 26004, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 05", server: ppy-usv2.02ijp4uos1.download, port: 26001, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 06", server: ppy-usv2.02ijp4uos1.download, port: 26002, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 07", server: ppy-usv2.02ijp4uos1.download, port: 26003, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 泡泡 美国 08", server: ppy-usv2.02ijp4uos1.download, port: 26004, type: vmess, uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 猫耳云 美国 01", server: hzyd.sevenka.top, port: 17773, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇺🇸 猫耳云 美国 02", server: gdyd.sevenka.top, port: 17778, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇺🇸 猫耳云 美国 03", server: hzyd.sevenka.top, port: 36075, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[SS] 🇺🇸 猫耳云 美国 04", server: gdyd.sevenka.top, port: 53537, type: ss, cipher: chacha20-ietf-poly1305, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, udp: true}
+  - {name: "[Hysteria2] 🇺🇸 猫耳云 美国 05", server: usahy2.maocf1.top, port: 20403, type: hysteria2, password: b2a1ebcc-ba9b-4959-9877-c994e1640574, auth: b2a1ebcc-ba9b-4959-9877-c994e1640574, sni: usahy2.maocf1.top, up: 5000, down: 5000, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 猫耳云 美国 06", server: m2bba1.maocf1.top, port: 2052, type: vmess, uuid: b2a1ebcc-ba9b-4959-9877-c994e1640574, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: lswjs.maocf1.top}}, udp: true}
+  - {name: "[VMess] 🇺🇸 猫耳云 美国 07", server: m2bba2.maocf1.top, port: 2052, type: vmess, uuid: b2a1ebcc-ba9b-4959-9877-c994e1640574, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: lswjs.maocf1.top}}, udp: true}
+  - {name: "[Trojan] 🇺🇸 糖果 美国 01", server: iepl.kaiqsz.com, port: 25250, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 糖果 美国 02", server: lt.kaiqsz.com, port: 25250, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 糖果 美国 03", server: yd.kaiqsz.com, port: 25250, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 糖果 美国 04", server: iepl.kaiqsz.com, port: 56582, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 糖果 美国 05", server: lt.kaiqsz.com, port: 56582, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 糖果 美国 06", server: yd.kaiqsz.com, port: 56582, type: trojan, password: a375b945-7539-4b2b-831a-4e98b5f4ac2f, sni: sin.9998-aabb.cc, skip-cert-verify: true, udp: true}
+proxy-groups:
+  - name: ✨ Meta AI
+    type: select
+    proxies:
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 📘 GitHub
+    type: select
+    proxies:
+      - 所有-自动
+      - 香港-自动
+      - 香港-A
+      - 香港-B
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 🪂 TikTok
+    type: select
+    proxies:
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 🙋 Telegram
+    type: select
+    proxies:
+      - 所有-自动
+      - 香港-自动
+      - 香港-A
+      - 香港-B
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - REJECT
+  - name: 🎞️ YouTube
+    type: select
+    proxies:
+      - 香港-自动
+      - 香港-A
+      - 香港-B
+      - 香港-C
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 🎞️ myTVSUPER
+    type: select
+    proxies:
+      - TVB
+      - 香港-A
+      - 香港-B
+      - 香港-自动
+      - 所有-手动
+  - name: 📺 Disney
+    type: select
+    proxies:
+      - 新加坡-自动
+      - 香港-A
+      - 香港-B
+      - 香港-C
+      - 香港-自动
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 香港-A
+      - 香港-B
+      - 香港-C
+      - 香港-自动
+      - 台湾-自动
+      - 日本-自动
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 🎬 HBO MAX
+    type: select
+    proxies:
+      - 香港-自动
+      - 香港-A
+      - 香港-B
+      - 香港-C
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 🌍 国外
+    type: select
+    proxies:
+      - 香港-自动
+      - 香港-A
+      - 香港-B
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - REJECT
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - DIRECT
+      - 所有-手动
+      - 所有-自动
+  - name: 🍎 Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 所有-手动
+      - 所有-自动
+      - 香港-自动
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: ➡️ 国内
+    type: select
+    proxies:
+      - DIRECT
+      - 所有-手动
+      - 所有-自动
+      - 香港-自动
+      - 香港-A
+      - 香港-B
+      - 台湾-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 新加坡-A
+      - 新加坡-B
+      - 韩国-自动
+      - 美国-自动
+      - 其他-自动
+      - REJECT
+  - name: 所有-手动
+    type: select
+    proxies:
+      - "[VMess] 🇨🇳 泡泡 台湾 01"
+      - "[VMess] 🇨🇳 泡泡 台湾 02"
+      - "[VMess] 🇨🇳 泡泡 台湾 03"
+      - "[VMess] 🇨🇳 泡泡 台湾 04"
+      - "[VMess] 🇨🇳 泡泡 台湾 05"
+      - "[VMess] 🇨🇳 泡泡 台湾 06"
+      - "[VMess] 🇨🇳 泡泡 台湾 07"
+      - "[VMess] 🇨🇳 泡泡 台湾 08"
+      - "[SS] 🇨🇳 猫耳云 台湾 01"
+      - "[SS] 🇨🇳 猫耳云 台湾 02"
+      - "[SS] 🇨🇳 猫耳云 台湾 03"
+      - "[SS] 🇨🇳 猫耳云 台湾 04"
+      - "[Hysteria2] 🇨🇳 猫耳云 台湾 05"
+      - "[Trojan] 🇨🇳 糖果 台湾 01"
+      - "[Trojan] 🇨🇳 糖果 台湾 02"
+      - "[Trojan] 🇨🇳 糖果 台湾 03"
+      - "[Trojan] 🇨🇳 糖果 台湾 04"
+      - "[Trojan] 🇨🇳 糖果 台湾 05"
+      - "[Trojan] 🇨🇳 糖果 台湾 06"
+      - "[VMess] 🇭🇰 泡泡 香港 01"
+      - "[VMess] 🇭🇰 泡泡 香港 02"
+      - "[VMess] 🇭🇰 泡泡 香港 03"
+      - "[VMess] 🇭🇰 泡泡 香港 04"
+      - "[VMess] 🇭🇰 泡泡 香港 05"
+      - "[VMess] 🇭🇰 泡泡 香港 06"
+      - "[VMess] 🇭🇰 泡泡 香港 07"
+      - "[VMess] 🇭🇰 泡泡 香港 08"
+      - "[VMess] 🇭🇰 泡泡 香港 09"
+      - "[VMess] 🇭🇰 泡泡 香港 10"
+      - "[VMess] 🇭🇰 泡泡 香港 11"
+      - "[VMess] 🇭🇰 泡泡 香港 12"
+      - "[SS] 🇭🇰 猫耳云 香港 01"
+      - "[SS] 🇭🇰 猫耳云 香港 02"
+      - "[SS] 🇭🇰 猫耳云 香港 03"
+      - "[SS] 🇭🇰 猫耳云 香港 04"
+      - "[SS] 🇭🇰 猫耳云 香港 05"
+      - "[SS] 🇭🇰 猫耳云 香港 06"
+      - "[Hysteria2] 🇭🇰 猫耳云 香港 07"
+      - "[Trojan] 🇭🇰 糖果 香港 01"
+      - "[Trojan] 🇭🇰 糖果 香港 02"
+      - "[Trojan] 🇭🇰 糖果 香港 03"
+      - "[VMess] 🇯🇵 泡泡 日本 01"
+      - "[VMess] 🇯🇵 泡泡 日本 02"
+      - "[VMess] 🇯🇵 泡泡 日本 03"
+      - "[VMess] 🇯🇵 泡泡 日本 04"
+      - "[VMess] 🇯🇵 泡泡 日本 05"
+      - "[VMess] 🇯🇵 泡泡 日本 06"
+      - "[VMess] 🇯🇵 泡泡 日本 07"
+      - "[VMess] 🇯🇵 泡泡 日本 08"
+      - "[SS] 🇯🇵 猫耳云 日本 01"
+      - "[SS] 🇯🇵 猫耳云 日本 02"
+      - "[SS] 🇯🇵 猫耳云 日本 03"
+      - "[SS] 🇯🇵 猫耳云 日本 04"
+      - "[Hysteria2] 🇯🇵 猫耳云 日本 05"
+      - "[Trojan] 🇯🇵 糖果 日本 01"
+      - "[Trojan] 🇯🇵 糖果 日本 02"
+      - "[Trojan] 🇯🇵 糖果 日本 03"
+      - "[VMess] 🇸🇬 泡泡 新加坡 01"
+      - "[VMess] 🇸🇬 泡泡 新加坡 02"
+      - "[VMess] 🇸🇬 泡泡 新加坡 03"
+      - "[VMess] 🇸🇬 泡泡 新加坡 04"
+      - "[VMess] 🇸🇬 泡泡 新加坡 05"
+      - "[VMess] 🇸🇬 泡泡 新加坡 06"
+      - "[VMess] 🇸🇬 泡泡 新加坡 07"
+      - "[VMess] 🇸🇬 泡泡 新加坡 08"
+      - "[SS] 🇸🇬 猫耳云 新加坡 01"
+      - "[SS] 🇸🇬 猫耳云 新加坡 02"
+      - "[SS] 🇸🇬 猫耳云 新加坡 03"
+      - "[SS] 🇸🇬 猫耳云 新加坡 04"
+      - "[Hysteria2] 🇸🇬 猫耳云 新加坡 05"
+      - "[Trojan] 🇸🇬 糖果 新加坡 01"
+      - "[Trojan] 🇸🇬 糖果 新加坡 02"
+      - "[Trojan] 🇸🇬 糖果 新加坡 03"
+      - "[VMess] 🇺🇸 泡泡 美国 01"
+      - "[VMess] 🇺🇸 泡泡 美国 02"
+      - "[VMess] 🇺🇸 泡泡 美国 03"
+      - "[VMess] 🇺🇸 泡泡 美国 04"
+      - "[VMess] 🇺🇸 泡泡 美国 05"
+      - "[VMess] 🇺🇸 泡泡 美国 06"
+      - "[VMess] 🇺🇸 泡泡 美国 07"
+      - "[VMess] 🇺🇸 泡泡 美国 08"
+      - "[SS] 🇺🇸 猫耳云 美国 01"
+      - "[SS] 🇺🇸 猫耳云 美国 02"
+      - "[SS] 🇺🇸 猫耳云 美国 03"
+      - "[SS] 🇺🇸 猫耳云 美国 04"
+      - "[Hysteria2] 🇺🇸 猫耳云 美国 05"
+      - "[VMess] 🇺🇸 猫耳云 美国 06"
+      - "[VMess] 🇺🇸 猫耳云 美国 07"
+      - "[Trojan] 🇺🇸 糖果 美国 01"
+      - "[Trojan] 🇺🇸 糖果 美国 02"
+      - "[Trojan] 🇺🇸 糖果 美国 03"
+      - "[Trojan] 🇺🇸 糖果 美国 04"
+      - "[Trojan] 🇺🇸 糖果 美国 05"
+      - "[Trojan] 🇺🇸 糖果 美国 06"
+  - name: 所有-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇨🇳 泡泡 台湾 01"
+      - "[VMess] 🇨🇳 泡泡 台湾 02"
+      - "[VMess] 🇨🇳 泡泡 台湾 03"
+      - "[VMess] 🇨🇳 泡泡 台湾 04"
+      - "[VMess] 🇨🇳 泡泡 台湾 05"
+      - "[VMess] 🇨🇳 泡泡 台湾 06"
+      - "[VMess] 🇨🇳 泡泡 台湾 07"
+      - "[VMess] 🇨🇳 泡泡 台湾 08"
+      - "[SS] 🇨🇳 猫耳云 台湾 01"
+      - "[SS] 🇨🇳 猫耳云 台湾 02"
+      - "[SS] 🇨🇳 猫耳云 台湾 03"
+      - "[SS] 🇨🇳 猫耳云 台湾 04"
+      - "[Hysteria2] 🇨🇳 猫耳云 台湾 05"
+      - "[Trojan] 🇨🇳 糖果 台湾 01"
+      - "[Trojan] 🇨🇳 糖果 台湾 02"
+      - "[Trojan] 🇨🇳 糖果 台湾 03"
+      - "[Trojan] 🇨🇳 糖果 台湾 04"
+      - "[Trojan] 🇨🇳 糖果 台湾 05"
+      - "[Trojan] 🇨🇳 糖果 台湾 06"
+      - "[VMess] 🇭🇰 泡泡 香港 01"
+      - "[VMess] 🇭🇰 泡泡 香港 02"
+      - "[VMess] 🇭🇰 泡泡 香港 03"
+      - "[VMess] 🇭🇰 泡泡 香港 04"
+      - "[VMess] 🇭🇰 泡泡 香港 05"
+      - "[VMess] 🇭🇰 泡泡 香港 06"
+      - "[VMess] 🇭🇰 泡泡 香港 07"
+      - "[VMess] 🇭🇰 泡泡 香港 08"
+      - "[VMess] 🇭🇰 泡泡 香港 09"
+      - "[VMess] 🇭🇰 泡泡 香港 10"
+      - "[VMess] 🇭🇰 泡泡 香港 11"
+      - "[VMess] 🇭🇰 泡泡 香港 12"
+      - "[SS] 🇭🇰 猫耳云 香港 01"
+      - "[SS] 🇭🇰 猫耳云 香港 02"
+      - "[SS] 🇭🇰 猫耳云 香港 03"
+      - "[SS] 🇭🇰 猫耳云 香港 04"
+      - "[SS] 🇭🇰 猫耳云 香港 05"
+      - "[SS] 🇭🇰 猫耳云 香港 06"
+      - "[Hysteria2] 🇭🇰 猫耳云 香港 07"
+      - "[Trojan] 🇭🇰 糖果 香港 01"
+      - "[Trojan] 🇭🇰 糖果 香港 02"
+      - "[Trojan] 🇭🇰 糖果 香港 03"
+      - "[VMess] 🇯🇵 泡泡 日本 01"
+      - "[VMess] 🇯🇵 泡泡 日本 02"
+      - "[VMess] 🇯🇵 泡泡 日本 03"
+      - "[VMess] 🇯🇵 泡泡 日本 04"
+      - "[VMess] 🇯🇵 泡泡 日本 05"
+      - "[VMess] 🇯🇵 泡泡 日本 06"
+      - "[VMess] 🇯🇵 泡泡 日本 07"
+      - "[VMess] 🇯🇵 泡泡 日本 08"
+      - "[SS] 🇯🇵 猫耳云 日本 01"
+      - "[SS] 🇯🇵 猫耳云 日本 02"
+      - "[SS] 🇯🇵 猫耳云 日本 03"
+      - "[SS] 🇯🇵 猫耳云 日本 04"
+      - "[Hysteria2] 🇯🇵 猫耳云 日本 05"
+      - "[Trojan] 🇯🇵 糖果 日本 01"
+      - "[Trojan] 🇯🇵 糖果 日本 02"
+      - "[Trojan] 🇯🇵 糖果 日本 03"
+      - "[VMess] 🇸🇬 泡泡 新加坡 01"
+      - "[VMess] 🇸🇬 泡泡 新加坡 02"
+      - "[VMess] 🇸🇬 泡泡 新加坡 03"
+      - "[VMess] 🇸🇬 泡泡 新加坡 04"
+      - "[VMess] 🇸🇬 泡泡 新加坡 05"
+      - "[VMess] 🇸🇬 泡泡 新加坡 06"
+      - "[VMess] 🇸🇬 泡泡 新加坡 07"
+      - "[VMess] 🇸🇬 泡泡 新加坡 08"
+      - "[SS] 🇸🇬 猫耳云 新加坡 01"
+      - "[SS] 🇸🇬 猫耳云 新加坡 02"
+      - "[SS] 🇸🇬 猫耳云 新加坡 03"
+      - "[SS] 🇸🇬 猫耳云 新加坡 04"
+      - "[Hysteria2] 🇸🇬 猫耳云 新加坡 05"
+      - "[Trojan] 🇸🇬 糖果 新加坡 01"
+      - "[Trojan] 🇸🇬 糖果 新加坡 02"
+      - "[Trojan] 🇸🇬 糖果 新加坡 03"
+      - "[VMess] 🇺🇸 泡泡 美国 01"
+      - "[VMess] 🇺🇸 泡泡 美国 02"
+      - "[VMess] 🇺🇸 泡泡 美国 03"
+      - "[VMess] 🇺🇸 泡泡 美国 04"
+      - "[VMess] 🇺🇸 泡泡 美国 05"
+      - "[VMess] 🇺🇸 泡泡 美国 06"
+      - "[VMess] 🇺🇸 泡泡 美国 07"
+      - "[VMess] 🇺🇸 泡泡 美国 08"
+      - "[SS] 🇺🇸 猫耳云 美国 01"
+      - "[SS] 🇺🇸 猫耳云 美国 02"
+      - "[SS] 🇺🇸 猫耳云 美国 03"
+      - "[SS] 🇺🇸 猫耳云 美国 04"
+      - "[Hysteria2] 🇺🇸 猫耳云 美国 05"
+      - "[VMess] 🇺🇸 猫耳云 美国 06"
+      - "[VMess] 🇺🇸 猫耳云 美国 07"
+      - "[Trojan] 🇺🇸 糖果 美国 01"
+      - "[Trojan] 🇺🇸 糖果 美国 02"
+      - "[Trojan] 🇺🇸 糖果 美国 03"
+      - "[Trojan] 🇺🇸 糖果 美国 04"
+      - "[Trojan] 🇺🇸 糖果 美国 05"
+      - "[Trojan] 🇺🇸 糖果 美国 06"
+  - name: 香港-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇭🇰 泡泡 香港 01"
+      - "[VMess] 🇭🇰 泡泡 香港 02"
+      - "[VMess] 🇭🇰 泡泡 香港 03"
+      - "[VMess] 🇭🇰 泡泡 香港 04"
+      - "[VMess] 🇭🇰 泡泡 香港 05"
+      - "[VMess] 🇭🇰 泡泡 香港 06"
+      - "[VMess] 🇭🇰 泡泡 香港 07"
+      - "[VMess] 🇭🇰 泡泡 香港 08"
+      - "[VMess] 🇭🇰 泡泡 香港 09"
+      - "[VMess] 🇭🇰 泡泡 香港 10"
+      - "[VMess] 🇭🇰 泡泡 香港 11"
+      - "[VMess] 🇭🇰 泡泡 香港 12"
+      - "[SS] 🇭🇰 猫耳云 香港 01"
+      - "[SS] 🇭🇰 猫耳云 香港 02"
+      - "[SS] 🇭🇰 猫耳云 香港 03"
+      - "[SS] 🇭🇰 猫耳云 香港 04"
+      - "[SS] 🇭🇰 猫耳云 香港 05"
+      - "[SS] 🇭🇰 猫耳云 香港 06"
+      - "[Hysteria2] 🇭🇰 猫耳云 香港 07"
+      - "[Trojan] 🇭🇰 糖果 香港 01"
+      - "[Trojan] 🇭🇰 糖果 香港 02"
+      - "[Trojan] 🇭🇰 糖果 香港 03"
+  - name: 香港-A
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[SS] 🇭🇰 猫耳云 香港 01"
+      - "[SS] 🇭🇰 猫耳云 香港 02"
+      - "[SS] 🇭🇰 猫耳云 香港 03"
+      - "[SS] 🇭🇰 猫耳云 香港 04"
+      - "[SS] 🇭🇰 猫耳云 香港 05"
+      - "[SS] 🇭🇰 猫耳云 香港 06"
+      - "[Hysteria2] 🇭🇰 猫耳云 香港 07"
+  - name: 香港-B
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[Trojan] 🇭🇰 糖果 香港 01"
+      - "[Trojan] 🇭🇰 糖果 香港 02"
+      - "[Trojan] 🇭🇰 糖果 香港 03"
+  - name: 香港-C
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇭🇰 泡泡 香港 01"
+      - "[VMess] 🇭🇰 泡泡 香港 02"
+      - "[VMess] 🇭🇰 泡泡 香港 03"
+      - "[VMess] 🇭🇰 泡泡 香港 04"
+      - "[VMess] 🇭🇰 泡泡 香港 05"
+      - "[VMess] 🇭🇰 泡泡 香港 06"
+      - "[VMess] 🇭🇰 泡泡 香港 07"
+      - "[VMess] 🇭🇰 泡泡 香港 08"
+      - "[VMess] 🇭🇰 泡泡 香港 09"
+      - "[VMess] 🇭🇰 泡泡 香港 10"
+      - "[VMess] 🇭🇰 泡泡 香港 11"
+      - "[VMess] 🇭🇰 泡泡 香港 12"
+  - name: TVB
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[SS] 🇭🇰 猫耳云 香港 01"
+      - "[SS] 🇭🇰 猫耳云 香港 02"
+      - "[SS] 🇭🇰 猫耳云 香港 05"
+      - "[SS] 🇭🇰 猫耳云 香港 06"
+  - name: 台湾-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇨🇳 泡泡 台湾 01"
+      - "[VMess] 🇨🇳 泡泡 台湾 02"
+      - "[VMess] 🇨🇳 泡泡 台湾 03"
+      - "[VMess] 🇨🇳 泡泡 台湾 04"
+      - "[VMess] 🇨🇳 泡泡 台湾 05"
+      - "[VMess] 🇨🇳 泡泡 台湾 06"
+      - "[VMess] 🇨🇳 泡泡 台湾 07"
+      - "[VMess] 🇨🇳 泡泡 台湾 08"
+      - "[SS] 🇨🇳 猫耳云 台湾 01"
+      - "[SS] 🇨🇳 猫耳云 台湾 02"
+      - "[SS] 🇨🇳 猫耳云 台湾 03"
+      - "[SS] 🇨🇳 猫耳云 台湾 04"
+      - "[Hysteria2] 🇨🇳 猫耳云 台湾 05"
+      - "[Trojan] 🇨🇳 糖果 台湾 01"
+      - "[Trojan] 🇨🇳 糖果 台湾 02"
+      - "[Trojan] 🇨🇳 糖果 台湾 03"
+      - "[Trojan] 🇨🇳 糖果 台湾 04"
+      - "[Trojan] 🇨🇳 糖果 台湾 05"
+      - "[Trojan] 🇨🇳 糖果 台湾 06"
+  - name: 日本-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇯🇵 泡泡 日本 01"
+      - "[VMess] 🇯🇵 泡泡 日本 02"
+      - "[VMess] 🇯🇵 泡泡 日本 03"
+      - "[VMess] 🇯🇵 泡泡 日本 04"
+      - "[VMess] 🇯🇵 泡泡 日本 05"
+      - "[VMess] 🇯🇵 泡泡 日本 06"
+      - "[VMess] 🇯🇵 泡泡 日本 07"
+      - "[VMess] 🇯🇵 泡泡 日本 08"
+      - "[SS] 🇯🇵 猫耳云 日本 01"
+      - "[SS] 🇯🇵 猫耳云 日本 02"
+      - "[SS] 🇯🇵 猫耳云 日本 03"
+      - "[SS] 🇯🇵 猫耳云 日本 04"
+      - "[Hysteria2] 🇯🇵 猫耳云 日本 05"
+      - "[Trojan] 🇯🇵 糖果 日本 01"
+      - "[Trojan] 🇯🇵 糖果 日本 02"
+      - "[Trojan] 🇯🇵 糖果 日本 03"
+  - name: 新加坡-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇸🇬 泡泡 新加坡 01"
+      - "[VMess] 🇸🇬 泡泡 新加坡 02"
+      - "[VMess] 🇸🇬 泡泡 新加坡 03"
+      - "[VMess] 🇸🇬 泡泡 新加坡 04"
+      - "[VMess] 🇸🇬 泡泡 新加坡 05"
+      - "[VMess] 🇸🇬 泡泡 新加坡 06"
+      - "[VMess] 🇸🇬 泡泡 新加坡 07"
+      - "[VMess] 🇸🇬 泡泡 新加坡 08"
+      - "[SS] 🇸🇬 猫耳云 新加坡 01"
+      - "[SS] 🇸🇬 猫耳云 新加坡 02"
+      - "[SS] 🇸🇬 猫耳云 新加坡 03"
+      - "[SS] 🇸🇬 猫耳云 新加坡 04"
+      - "[Hysteria2] 🇸🇬 猫耳云 新加坡 05"
+      - "[Trojan] 🇸🇬 糖果 新加坡 01"
+      - "[Trojan] 🇸🇬 糖果 新加坡 02"
+      - "[Trojan] 🇸🇬 糖果 新加坡 03"
+  - name: 新加坡-A
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[SS] 🇸🇬 猫耳云 新加坡 01"
+      - "[SS] 🇸🇬 猫耳云 新加坡 02"
+      - "[SS] 🇸🇬 猫耳云 新加坡 03"
+      - "[SS] 🇸🇬 猫耳云 新加坡 04"
+      - "[Hysteria2] 🇸🇬 猫耳云 新加坡 05"
+      - "[Trojan] 🇸🇬 糖果 新加坡 01"
+      - "[Trojan] 🇸🇬 糖果 新加坡 02"
+      - "[Trojan] 🇸🇬 糖果 新加坡 03"
+  - name: 新加坡-B
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇸🇬 泡泡 新加坡 01"
+      - "[VMess] 🇸🇬 泡泡 新加坡 02"
+      - "[VMess] 🇸🇬 泡泡 新加坡 03"
+      - "[VMess] 🇸🇬 泡泡 新加坡 04"
+      - "[VMess] 🇸🇬 泡泡 新加坡 05"
+      - "[VMess] 🇸🇬 泡泡 新加坡 06"
+      - "[VMess] 🇸🇬 泡泡 新加坡 07"
+      - "[VMess] 🇸🇬 泡泡 新加坡 08"
+  - name: 韩国-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - DIRECT
+  - name: 美国-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[VMess] 🇺🇸 泡泡 美国 01"
+      - "[VMess] 🇺🇸 泡泡 美国 02"
+      - "[VMess] 🇺🇸 泡泡 美国 03"
+      - "[VMess] 🇺🇸 泡泡 美国 04"
+      - "[VMess] 🇺🇸 泡泡 美国 05"
+      - "[VMess] 🇺🇸 泡泡 美国 06"
+      - "[VMess] 🇺🇸 泡泡 美国 07"
+      - "[VMess] 🇺🇸 泡泡 美国 08"
+      - "[SS] 🇺🇸 猫耳云 美国 01"
+      - "[SS] 🇺🇸 猫耳云 美国 02"
+      - "[SS] 🇺🇸 猫耳云 美国 03"
+      - "[SS] 🇺🇸 猫耳云 美国 04"
+      - "[Hysteria2] 🇺🇸 猫耳云 美国 05"
+      - "[VMess] 🇺🇸 猫耳云 美国 06"
+      - "[VMess] 🇺🇸 猫耳云 美国 07"
+      - "[Trojan] 🇺🇸 糖果 美国 01"
+      - "[Trojan] 🇺🇸 糖果 美国 02"
+      - "[Trojan] 🇺🇸 糖果 美国 03"
+      - "[Trojan] 🇺🇸 糖果 美国 04"
+      - "[Trojan] 🇺🇸 糖果 美国 05"
+      - "[Trojan] 🇺🇸 糖果 美国 06"
+  - name: 其他-自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "[SS] 🇨🇳 猫耳云 台湾 01"
+      - "[SS] 🇨🇳 猫耳云 台湾 02"
+      - "[SS] 🇨🇳 猫耳云 台湾 03"
+      - "[SS] 🇨🇳 猫耳云 台湾 04"
+      - "[Hysteria2] 🇨🇳 猫耳云 台湾 05"
+      - "[SS] 🇭🇰 猫耳云 香港 01"
+      - "[SS] 🇭🇰 猫耳云 香港 02"
+      - "[SS] 🇭🇰 猫耳云 香港 03"
+      - "[SS] 🇭🇰 猫耳云 香港 04"
+      - "[SS] 🇭🇰 猫耳云 香港 05"
+      - "[SS] 🇭🇰 猫耳云 香港 06"
+      - "[Hysteria2] 🇭🇰 猫耳云 香港 07"
+      - "[SS] 🇯🇵 猫耳云 日本 01"
+      - "[SS] 🇯🇵 猫耳云 日本 02"
+      - "[SS] 🇯🇵 猫耳云 日本 03"
+      - "[SS] 🇯🇵 猫耳云 日本 04"
+      - "[Hysteria2] 🇯🇵 猫耳云 日本 05"
+      - "[SS] 🇸🇬 猫耳云 新加坡 01"
+      - "[SS] 🇸🇬 猫耳云 新加坡 02"
+      - "[SS] 🇸🇬 猫耳云 新加坡 03"
+      - "[SS] 🇸🇬 猫耳云 新加坡 04"
+      - "[Hysteria2] 🇸🇬 猫耳云 新加坡 05"
+      - "[SS] 🇺🇸 猫耳云 美国 01"
+      - "[SS] 🇺🇸 猫耳云 美国 02"
+      - "[SS] 🇺🇸 猫耳云 美国 03"
+      - "[SS] 🇺🇸 猫耳云 美国 04"
+      - "[Hysteria2] 🇺🇸 猫耳云 美国 05"
+      - "[VMess] 🇺🇸 猫耳云 美国 06"
+      - "[VMess] 🇺🇸 猫耳云 美国 07"
+rules:
+  - RULE-SET,ProxyLite,🌍 国外
+  - RULE-SET,BilibiliHMT,📺 哔哩哔哩
+  - RULE-SET,Bilibili,📺 哔哩哔哩
+  - RULE-SET,ChatGPT,✨ Meta AI
+  - RULE-SET,Copilot,✨ Meta AI
+  - RULE-SET,Gemini,✨ Meta AI
+  - RULE-SET,Claude,✨ Meta AI
+  - RULE-SET,MetaAi,✨ Meta AI
+  - RULE-SET,GitHub,📘 GitHub
+  - RULE-SET,GitHub_2,📘 GitHub
+  - RULE-SET,TikTok,🪂 TikTok
+  - RULE-SET,Telegram,🙋 Telegram
+  - RULE-SET,Apple,🍎 Apple
+  - RULE-SET,YouTube,🎞️ YouTube
+  - RULE-SET,YouTube_2,🎞️ YouTube
+  - RULE-SET,myTVSUPER,🎞️ myTVSUPER
+  - RULE-SET,Disney,📺 Disney
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,HBO,🎬 HBO MAX
+  - DOMAIN-KEYWORD,max,🎬 HBO MAX
+  - DOMAIN-SUFFIX,help.max.com,🎬 HBO MAX
+  - DOMAIN-SUFFIX,max.com,🎬 HBO MAX
+  - RULE-SET,ProxyMedia,🌍 国外
+  - RULE-SET,ProxyGFWlist,🌍 国外
+  - RULE-SET,Check,🌍 国外
+  - RULE-SET,Proxy,🌍 国外
+  - RULE-SET,Global,🌍 国外
+  - MATCH,➡️ 国内
+rule-providers:
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3FpY2hpeXVodWIvcnVsZS9tYXN0ZXIvUHJveHlMaXRlLmxpc3Q
+    path: ./providers/rule-provider_ProxyLite.yaml
+    interval: 86400
+  BilibiliHMT:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcvcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BQ0w0U1NSL0FDTDRTU1IvbWFzdGVyL0NsYXNoL1J1bGVzZXQvQmlsaWJpbGlITVQubGlzdA
+    path: ./providers/rule-provider_BilibiliHMT.yaml
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcvcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BQ0w0U1NSL0FDTDRTU1IvbWFzdGVyL0NsYXNoL1J1bGVzZXQvQmlsaWJpbGkubGlzdA
+    path: ./providers/rule-provider_Bilibili.yaml
+    interval: 86400
+  ChatGPT:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2xpYW5kdTIwMjQvY2xhc2gvcmVmcy9oZWFkcy9tYWluL2xpc3QvQ2hhdEdQVC5saXN0
+    path: ./providers/rule-provider_ChatGPT.yaml
+    interval: 86400
+  Copilot:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9Db3BpbG90L0NvcGlsb3QubGlzdA
+    path: ./providers/rule-provider_Copilot.yaml
+    interval: 86400
+  Gemini:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9HZW1pbmkvR2VtaW5pLmxpc3Q
+    path: ./providers/rule-provider_Gemini.yaml
+    interval: 86400
+  Claude:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9DbGF1ZGUvQ2xhdWRlLmxpc3Q
+    path: ./providers/rule-provider_Claude.yaml
+    interval: 86400
+  MetaAi:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2xpYW5kdTIwMjQvY2xhc2gvcmVmcy9oZWFkcy9tYWluL2xpc3QvTWV0YUFpLmxpc3Q
+    path: ./providers/rule-provider_MetaAi.yaml
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9HaXRIdWIvR2l0SHViLmxpc3Q
+    path: ./providers/rule-provider_GitHub.yaml
+    interval: 86400
+  GitHub_2:
+    type: http
+    behavior: classical
+    url: https://github.geekery.cn/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    path: ./providers/rule-provider_GitHub_2.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9UaWtUb2svVGlrVG9rLmxpc3Q
+    path: ./providers/rule-provider_TikTok.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    path: ./providers/rule-provider_Telegram.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQXBwbGUvQXBwbGUubGlzdA
+    path: ./providers/rule-provider_Apple.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2xpYW5kdTIwMjQvY2xhc2gvcmVmcy9oZWFkcy9tYWluL2xpc3QvWW91VHViZS5saXN0
+    path: ./providers/rule-provider_YouTube.yaml
+    interval: 86400
+  YouTube_2:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWW91VHViZS9Zb3VUdWJlLmxpc3Q
+    path: ./providers/rule-provider_YouTube_2.yaml
+    interval: 86400
+  myTVSUPER:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9teVRWU1VQRVIvbXlUVlNVUEVSLmxpc3Q
+    path: ./providers/rule-provider_myTVSUPER.yaml
+    interval: 86400
+  Disney:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlzbmV5L0Rpc25leS5saXN0
+    path: ./providers/rule-provider_Disney.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTmV0ZmxpeC9OZXRmbGl4Lmxpc3Q
+    path: ./providers/rule-provider_Netflix.yaml
+    interval: 86400
+  HBO:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9IQk8vSEJPLmxpc3Q
+    path: ./providers/rule-provider_HBO.yaml
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0
+    path: ./providers/rule-provider_ProxyMedia.yaml
+    interval: 86400
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlHRldsaXN0Lmxpc3Q
+    path: ./providers/rule-provider_ProxyGFWlist.yaml
+    interval: 86400
+  Check:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2xpYW5kdTIwMjQvY2xhc2gvcmVmcy9oZWFkcy9tYWluL2xpc3QvQ2hlY2subGlzdA
+    path: ./providers/rule-provider_Check.yaml
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2xpYW5kdTIwMjQvY2xhc2gvcmVmcy9oZWFkcy9tYWluL2xpc3QvUHJveHkubGlzdA
+    path: ./providers/rule-provider_Proxy.yaml
+    interval: 86400
+  Global:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naXRodWIuZ2Vla2VyeS5jbi9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9HbG9iYWwvR2xvYmFsLmxpc3Q
+    path: ./providers/rule-provider_Global.yaml
+    interval: 86400
