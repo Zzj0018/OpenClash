@@ -7,7 +7,7 @@
 proxy-providers:
     
   Lz:
-    url: "https://dc2.cc.cd:3002/Lz18/download/collection/Lz"
+    url: "Lz"
     type: http
     interval: 86400
     override:
