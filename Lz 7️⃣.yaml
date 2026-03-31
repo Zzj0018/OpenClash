@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "http://192.168.166.6:3001/CKg2abstVnOeRpm1aB4G/download/collection/LZ?target=ClashMeta"
+    url: "http://"
     type: http
     interval: 86400
     health-check:
