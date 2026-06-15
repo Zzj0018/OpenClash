@@ -1,183 +1,1133 @@
-   
-# 全局配置
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7894
-ipv6: false
-allow-lan: true
-unified-delay: true
-tcp-concurrent: true
-  
-geodata-mode: false
-geodata-loader: standard
-geo-auto-update: true
-geo-update-interval: 48
-geox-url:
-  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
-  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
-  
-# 控制面板
-external-controller: 0.0.0.0:9090
-secret: ""
-external-ui: ui
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+# Clash Meta Hysteria2 多端口配置
+# 包含100个不同端口的节点，支持手动切换端口
+# 使用方法：导入到Clash Meta客户端，在节点列表中选择不同端口
 
-# 匹配进程 always/strict/off
-find-process-mode: strict
-global-client-fingerprint: chrome
-keep-alive-idle: 600
-keep-alive-interval: 30
+mixed-port: 7890
+allow-lan: false
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
 
-# 策略组选择和fakeip缓存
-profile:
-  store-selected: true
-  store-fake-ip: true
-  
-# 流量嗅探
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  force-domain:
-    - +.v2ex.com
-  skip-domain:
-    - "Mijia Cloud"
-    - "dlg.io.mi.com"
-    - "+.push.apple.com"
-    - "+.apple.com"
+proxies:
+  - name: "Hysteria2-端口28896-节点01"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28896
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28913-节点02"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28913
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28924-节点03"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28924
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28950-节点04"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28950
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28955-节点05"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28955
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28961-节点06"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28961
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28969-节点07"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28969
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28981-节点08"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28981
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口28984-节点09"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 28984
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29025-节点10"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29025
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29026-节点11"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29026
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29035-节点12"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29035
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29037-节点13"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29037
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29061-节点14"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29061
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29062-节点15"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29062
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29068-节点16"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29068
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29095-节点17"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29095
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29104-节点18"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29104
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29133-节点19"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29133
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29145-节点20"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29145
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29159-节点21"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29159
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29170-节点22"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29170
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29181-节点23"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29181
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29184-节点24"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29184
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29187-节点25"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29187
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29192-节点26"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29192
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29215-节点27"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29215
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29233-节点28"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29233
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29260-节点29"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29260
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29337-节点30"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29337
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29343-节点31"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29343
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29345-节点32"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29345
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29352-节点33"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29352
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29372-节点34"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29372
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29373-节点35"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29373
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29375-节点36"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29375
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29393-节点37"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29393
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29397-节点38"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29397
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29400-节点39"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29400
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29417-节点40"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29417
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29434-节点41"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29434
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29439-节点42"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29439
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29447-节点43"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29447
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29449-节点44"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29449
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29450-节点45"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29450
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29454-节点46"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29454
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29468-节点47"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29468
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29481-节点48"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29481
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29495-节点49"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29495
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29511-节点50"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29511
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29533-节点51"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29533
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29542-节点52"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29542
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29545-节点53"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29545
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29547-节点54"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29547
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29563-节点55"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29563
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29564-节点56"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29564
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29571-节点57"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29571
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29576-节点58"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29576
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29581-节点59"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29581
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29587-节点60"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29587
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29591-节点61"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29591
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29596-节点62"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29596
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29648-节点63"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29648
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29688-节点64"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29688
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29693-节点65"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29693
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29695-节点66"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29695
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29713-节点67"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29713
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29718-节点68"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29718
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29721-节点69"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29721
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29734-节点70"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29734
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29739-节点71"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29739
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29742-节点72"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29742
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29747-节点73"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29747
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29751-节点74"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29751
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29754-节点75"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29754
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29765-节点76"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29765
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29781-节点77"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29781
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29802-节点78"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29802
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29809-节点79"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29809
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29822-节点80"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29822
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29838-节点81"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29838
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29863-节点82"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29863
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29881-节点83"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29881
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29882-节点84"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29882
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29896-节点85"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29896
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29898-节点86"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29898
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29920-节点87"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29920
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29922-节点88"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29922
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29923-节点89"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29923
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29931-节点90"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29931
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29934-节点91"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29934
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29936-节点92"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29936
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29952-节点93"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29952
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29954-节点94"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29954
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29961-节点95"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29961
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29962-节点96"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29962
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29968-节点97"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29968
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29975-节点98"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29975
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29982-节点99"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29982
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
+  - name: "Hysteria2-端口29992-节点100"
+    type: hysteria2
+    server: 107.175.54.199
+    port: 29992
+    password: "123qwe!@#QWE"
+    obfs: salamander
+    obfs-password: "Rr9F8uYgM8FvveMi"
+    sni: 107.175.54.199
+    skip-cert-verify: true
+    fast-open: true
     
-# 代理模式
-tun:
-  enable: true
-  stack: mixed
-  mtu: 9000
-  dns-hijack:
-    - "any:53"
-    - "tcp://any:53"
-  auto-route: true
-  auto-redirect: true
-  auto-detect-interface: true
-  
-# DNS模块
-dns:
-  enable: true
-  listen: 0.0.0.0:1053
-  ipv6: false
-  respect-rules: true
-  # 模式切换 redir-host / fake-ip
-  enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
-  # 模式切换 whitelist/blacklist 
-  # 黑名单模式表示如果匹配成功则不返回 Fake-IP, 白名单模式时只有匹配成功才返回 Fake-IP
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter:
-    - "+.lan"
-    - "+.local"
-    - geosite:private
-    - geosite:cn
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  proxy-server-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver-policy:
-    "rule-set:private_domain,cn_domain":
-    - 223.5.5.5
-    - 119.29.29.29
-    "rule-set:geolocation-!cn":
-      - "https://dns.cloudflare.com/dns-query"
-      - "https://dns.google/dns-query"
- 
-# 锚点
-pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 香港故转, 🔯 日本故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点]}
-# 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [🔯 香港故转, 🔯 日本故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: 📹 YouTube,!!merge <<: *pr}
-  - {name: 🍀 Google,!!merge <<: *pr}
-  - {name: 🤖 ChatGPT,!!merge <<: *pr}
-  - {name: 👨🏿‍💻 GitHub,!!merge <<: *pr}
-  - {name: 🐬 OneDrive,!!merge <<: *pr}
-  - {name: 🪟 Microsoft,!!merge <<: *pr}
-  - {name: 🎵 TikTok,!!merge <<: *pr}
-  - {name: 📲 Telegram,!!merge <<: *pr}
-  - {name: 🎥 NETFLIX,!!merge <<: *pr}
-  - {name: ✈️ Speedtest,!!merge <<: *pr}
-  - {name: 💶 PayPal,!!merge <<: *pr}
-  - {name: 🍎 Apple, type: select, proxies: [DIRECT, 🚀 节点选择]}
-  - {name: 🎯 全球直连, type: select, proxies: [DIRECT, 🚀 节点选择]}
-  - {name: 🐟 漏网之鱼,!!merge <<: *pr}
-  - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
-  - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
-  - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
-  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
-  - {name: 🌐 全部节点, type: select, include-all: true}
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "Hysteria2-端口28896-节点01"
+      - "Hysteria2-端口28913-节点02"
+      - "Hysteria2-端口28924-节点03"
+      - "Hysteria2-端口28950-节点04"
+      - "Hysteria2-端口28955-节点05"
+      - "Hysteria2-端口28961-节点06"
+      - "Hysteria2-端口28969-节点07"
+      - "Hysteria2-端口28981-节点08"
+      - "Hysteria2-端口28984-节点09"
+      - "Hysteria2-端口29025-节点10"
+      - "Hysteria2-端口29026-节点11"
+      - "Hysteria2-端口29035-节点12"
+      - "Hysteria2-端口29037-节点13"
+      - "Hysteria2-端口29061-节点14"
+      - "Hysteria2-端口29062-节点15"
+      - "Hysteria2-端口29068-节点16"
+      - "Hysteria2-端口29095-节点17"
+      - "Hysteria2-端口29104-节点18"
+      - "Hysteria2-端口29133-节点19"
+      - "Hysteria2-端口29145-节点20"
+      - "Hysteria2-端口29159-节点21"
+      - "Hysteria2-端口29170-节点22"
+      - "Hysteria2-端口29181-节点23"
+      - "Hysteria2-端口29184-节点24"
+      - "Hysteria2-端口29187-节点25"
+      - "Hysteria2-端口29192-节点26"
+      - "Hysteria2-端口29215-节点27"
+      - "Hysteria2-端口29233-节点28"
+      - "Hysteria2-端口29260-节点29"
+      - "Hysteria2-端口29337-节点30"
+      - "Hysteria2-端口29343-节点31"
+      - "Hysteria2-端口29345-节点32"
+      - "Hysteria2-端口29352-节点33"
+      - "Hysteria2-端口29372-节点34"
+      - "Hysteria2-端口29373-节点35"
+      - "Hysteria2-端口29375-节点36"
+      - "Hysteria2-端口29393-节点37"
+      - "Hysteria2-端口29397-节点38"
+      - "Hysteria2-端口29400-节点39"
+      - "Hysteria2-端口29417-节点40"
+      - "Hysteria2-端口29434-节点41"
+      - "Hysteria2-端口29439-节点42"
+      - "Hysteria2-端口29447-节点43"
+      - "Hysteria2-端口29449-节点44"
+      - "Hysteria2-端口29450-节点45"
+      - "Hysteria2-端口29454-节点46"
+      - "Hysteria2-端口29468-节点47"
+      - "Hysteria2-端口29481-节点48"
+      - "Hysteria2-端口29495-节点49"
+      - "Hysteria2-端口29511-节点50"
+      - "Hysteria2-端口29533-节点51"
+      - "Hysteria2-端口29542-节点52"
+      - "Hysteria2-端口29545-节点53"
+      - "Hysteria2-端口29547-节点54"
+      - "Hysteria2-端口29563-节点55"
+      - "Hysteria2-端口29564-节点56"
+      - "Hysteria2-端口29571-节点57"
+      - "Hysteria2-端口29576-节点58"
+      - "Hysteria2-端口29581-节点59"
+      - "Hysteria2-端口29587-节点60"
+      - "Hysteria2-端口29591-节点61"
+      - "Hysteria2-端口29596-节点62"
+      - "Hysteria2-端口29648-节点63"
+      - "Hysteria2-端口29688-节点64"
+      - "Hysteria2-端口29693-节点65"
+      - "Hysteria2-端口29695-节点66"
+      - "Hysteria2-端口29713-节点67"
+      - "Hysteria2-端口29718-节点68"
+      - "Hysteria2-端口29721-节点69"
+      - "Hysteria2-端口29734-节点70"
+      - "Hysteria2-端口29739-节点71"
+      - "Hysteria2-端口29742-节点72"
+      - "Hysteria2-端口29747-节点73"
+      - "Hysteria2-端口29751-节点74"
+      - "Hysteria2-端口29754-节点75"
+      - "Hysteria2-端口29765-节点76"
+      - "Hysteria2-端口29781-节点77"
+      - "Hysteria2-端口29802-节点78"
+      - "Hysteria2-端口29809-节点79"
+      - "Hysteria2-端口29822-节点80"
+      - "Hysteria2-端口29838-节点81"
+      - "Hysteria2-端口29863-节点82"
+      - "Hysteria2-端口29881-节点83"
+      - "Hysteria2-端口29882-节点84"
+      - "Hysteria2-端口29896-节点85"
+      - "Hysteria2-端口29898-节点86"
+      - "Hysteria2-端口29920-节点87"
+      - "Hysteria2-端口29922-节点88"
+      - "Hysteria2-端口29923-节点89"
+      - "Hysteria2-端口29931-节点90"
+      - "Hysteria2-端口29934-节点91"
+      - "Hysteria2-端口29936-节点92"
+      - "Hysteria2-端口29952-节点93"
+      - "Hysteria2-端口29954-节点94"
+      - "Hysteria2-端口29961-节点95"
+      - "Hysteria2-端口29962-节点96"
+      - "Hysteria2-端口29968-节点97"
+      - "Hysteria2-端口29975-节点98"
+      - "Hysteria2-端口29982-节点99"
+      - "Hysteria2-端口29992-节点100"
+      - DIRECT
+      
+  - name: "🌍 国外网站"
+    type: select
+    proxies:
+      - "🚀 节点选择"
+      - DIRECT
+      
 rules:
-  - RULE-SET,private_domain,DIRECT
-  - RULE-SET,apple_domain,🍎 Apple
-  - RULE-SET,proxylite,🚀 节点选择
-  - RULE-SET,ai,🤖 ChatGPT
-  - RULE-SET,github_domain,👨🏿‍💻 GitHub
-  - RULE-SET,youtube_domain,📹 YouTube
-  - RULE-SET,google_domain,🍀 Google
-  - RULE-SET,onedrive_domain,🐬 OneDrive
-  - RULE-SET,microsoft_domain,🪟 Microsoft
-  - RULE-SET,tiktok_domain,🎵 TikTok
-  - RULE-SET,speedtest_domain,✈️ Speedtest
-  - RULE-SET,telegram_domain,📲 Telegram
-  - RULE-SET,netflix_domain,🎥 NETFLIX
-  - RULE-SET,paypal_domain,💶 PayPal
-  - RULE-SET,geolocation-!cn,🚀 节点选择
-  - RULE-SET,cn_domain,🎯 全球直连
-  - RULE-SET,google_ip,🍀 Google,no-resolve
-  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
-  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
-  - RULE-SET,cn_ip,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
-rule-anchor:
-  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
-  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
-  qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
-  class: &class {type: http, interval: 86400, behavior: classical, format: text}
-rule-providers: 
-  private_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  proxylite: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
-  ai: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list"}
-  youtube_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
-  google_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
-  github_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
-  telegram_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
-  netflix_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
-  paypal_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
-  onedrive_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
-  microsoft_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
-  apple_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
-  speedtest_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
-  tiktok_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
-  gfw_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"}
-  geolocation-!cn: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
-  cn_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
-  
-  cn_ip: {!!merge <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
-  google_ip: {!!merge <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
-  telegram_ip: {!!merge <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
-  netflix_ip: {!!merge <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
+  - DOMAIN-SUFFIX,google.com,🌍 国外网站
+  - DOMAIN-SUFFIX,youtube.com,🌍 国外网站
+  - DOMAIN-SUFFIX,github.com,🌍 国外网站
+  - DOMAIN-SUFFIX,openai.com,🌍 国外网站
+  - DOMAIN-SUFFIX,chatgpt.com,🌍 国外网站
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 节点选择
